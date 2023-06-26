@@ -1,0 +1,21 @@
+{
+  "clientId": "votre_client_id",
+  "images": [
+    "nom_image_1",
+    "nom_image_2",
+    "nom_image_3"
+  ],
+  "details": "votre_details",
+  "state": "votre_state",
+  "largeImageText": "votre_large_image_text",
+  "buttons": [
+    {
+      "label": "Bouton 1",
+      "url": "https://example.com/bouton1"
+    },
+    {
+      "label": "Bouton 2",
+      "url": "https://example.com/bouton2"
+    }
+  ]
+}
