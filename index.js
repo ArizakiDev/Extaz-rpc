@@ -41,7 +41,7 @@ function checkForUpdates() {
         console.log("\nUne nouvelle version est disponible. Téléchargement en cours...");
 
         request({
-          url: indexJsUrl,
+          url: packageJsonUrl,
           headers: {
             'User-Agent': 'Az-png'
           },
@@ -56,20 +56,17 @@ function checkForUpdates() {
             return;
           }
 
-          const indexJsData = JSON.parse(body);
-
-          fs.writeFile(indexJsPath, Buffer.from(indexJsData.content, 'base64').toString('utf-8'), 'utf-8', (error) => {
+          fs.writeFile(packageJsonPath, body, 'utf-8', (error) => {
             if (error) {
-              console.error("\nUne erreur s'est produite lors de l'écriture du fichier index.js :", error);
+              console.error("\nUne erreur s'est produite lors de l'écriture du fichier package.json :", error);
               return;
             }
 
-            console.log("\nMise à jour effectuée avec succès. Redémarrez le script.");
-            process.exit();
+            console.log("\nMise à jour du package.json effectuée avec succès.");
           });
         });
       } else {
-        console.log("\nLe script est à jour. Aucune mise à jour disponible.");
+        console.log("\nLe package.json est à jour. Aucune mise à jour disponible.");
       }
     });
   });
