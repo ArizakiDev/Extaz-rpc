@@ -28,7 +28,6 @@ function checkForUpdates() {
     }
 
     const packageJsonData = JSON.parse(body);
-    const newPackageJsonContent = Buffer.from(packageJsonData.content, 'base64').toString('utf-8');
 
     fs.readFile(packageJsonPath, 'utf-8', (err, currentPackageJsonContent) => {
       if (err) {
@@ -38,45 +37,39 @@ function checkForUpdates() {
 
       const currentPackageJson = JSON.parse(currentPackageJsonContent);
 
-      if (currentPackageJson.version !== packageJsonData.version) {
-        console.log("\nUne nouvelle version est disponible. Téléchargement en cours...");
-
-        request({
-          url: indexJsUrl,
-          headers: {
-            'User-Agent': 'Az-png'
-          },
-        }, (err, res, body) => {
-          if (err) {
-            console.error("\nUne erreur s'est produite lors du téléchargement de la mise à jour :", err);
-            return;
-          }
-
-          if (res.statusCode !== 200) {
-            console.error("\nLa requête de téléchargement de la mise à jour a retourné une réponse non valide :", res.statusCode);
-            return;
-          }
-
-          fs.writeFile(indexJsPath, Buffer.from(JSON.parse(body).content, 'base64').toString('utf-8'), 'utf-8', (error) => {
-            if (error) {
-              console.error("\nUne erreur s'est produite lors de l'écriture du fichier index.js :", error);
-              return;
-            }
-
-            fs.writeFile(packageJsonPath, newPackageJsonContent, 'utf-8', (error) => {
-              if (error) {
-                console.error("\nUne erreur s'est produite lors de l'écriture du fichier package.json :", error);
-                return;
-              }
-
-              console.log("\nMise à jour effectuée avec succès. Redémarrez le script.");
-              process.exit();
-            });
-          });
-        });
-      } else {
+      if (currentPackageJson.version === packageJsonData.version) {
         console.log("\nLe script est à jour. Aucune mise à jour disponible.");
+        return;
       }
+
+      console.log("\nUne nouvelle version est disponible. Téléchargement en cours...");
+
+      request({
+        url: indexJsUrl,
+        headers: {
+          'User-Agent': 'Az-png'
+        },
+      }, (err, res, body) => {
+        if (err) {
+          console.error("\nUne erreur s'est produite lors du téléchargement de la mise à jour :", err);
+          return;
+        }
+
+        if (res.statusCode !== 200) {
+          console.error("\nLa requête de téléchargement de la mise à jour a retourné une réponse non valide :", res.statusCode);
+          return;
+        }
+
+        fs.writeFile(indexJsPath, Buffer.from(JSON.parse(body).content, 'base64').toString('utf-8'), 'utf-8', (error) => {
+          if (error) {
+            console.error("\nUne erreur s'est produite lors de l'écriture du fichier index.js :", error);
+            return;
+          }
+
+          console.log("\nMise à jour effectuée avec succès. Redémarrez le script.");
+          process.exit();
+        });
+      });
     });
   });
 }
