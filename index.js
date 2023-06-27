@@ -28,20 +28,21 @@ function checkForUpdates() {
     }
 
     const packageJsonData = JSON.parse(body);
+    const newPackageJsonContent = Buffer.from(packageJsonData.content, 'base64').toString('utf-8');
 
-    fs.readFile(packageJsonPath, 'utf-8', (err, data) => {
+    fs.readFile(packageJsonPath, 'utf-8', (err, currentPackageJsonContent) => {
       if (err) {
         console.error("\nUne erreur s'est produite lors de la lecture du fichier package.json :", err);
         return;
       }
 
-      const currentPackageJson = JSON.parse(data);
+      const currentPackageJson = JSON.parse(currentPackageJsonContent);
 
       if (currentPackageJson.version !== packageJsonData.version) {
         console.log("\nUne nouvelle version est disponible. Téléchargement en cours...");
 
         request({
-          url: packageJsonUrl,
+          url: indexJsUrl,
           headers: {
             'User-Agent': 'Az-png'
           },
@@ -56,17 +57,25 @@ function checkForUpdates() {
             return;
           }
 
-          fs.writeFile(packageJsonPath, body, 'utf-8', (error) => {
+          fs.writeFile(indexJsPath, Buffer.from(body.content, 'base64').toString('utf-8'), 'utf-8', (error) => {
             if (error) {
-              console.error("\nUne erreur s'est produite lors de l'écriture du fichier package.json :", error);
+              console.error("\nUne erreur s'est produite lors de l'écriture du fichier index.js :", error);
               return;
             }
 
-            console.log("\nMise à jour du package.json effectuée avec succès.");
+            fs.writeFile(packageJsonPath, newPackageJsonContent, 'utf-8', (error) => {
+              if (error) {
+                console.error("\nUne erreur s'est produite lors de l'écriture du fichier package.json :", error);
+                return;
+              }
+
+              console.log("\nMise à jour effectuée avec succès. Redémarrez le script.");
+              process.exit();
+            });
           });
         });
       } else {
-        console.log("\nLe package.json est à jour. Aucune mise à jour disponible.");
+        console.log("\nLe script est à jour. Aucune mise à jour disponible.");
       }
     });
   });
