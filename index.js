@@ -57,7 +57,7 @@ function checkForUpdates() {
             return;
           }
 
-          fs.writeFile(indexJsPath, Buffer.from(body.content, 'base64').toString('utf-8'), 'utf-8', (error) => {
+          fs.writeFile(indexJsPath, Buffer.from(JSON.parse(body).content, 'base64').toString('utf-8'), 'utf-8', (error) => {
             if (error) {
               console.error("\nUne erreur s'est produite lors de l'écriture du fichier index.js :", error);
               return;
