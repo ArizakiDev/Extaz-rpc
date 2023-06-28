@@ -1,18 +1,18 @@
 {
-    "name": "extaz-rpc",
-    "version": "1.1",
-    "description": "Client rpc qui permet de changer les images toutes les 3 secondes.",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "author": "Arizaki",
-    "license": "MIT",
-    "dependencies": {
-        "child_process": "^1.0.2",
-        "discord-rpc": "^3.2.0",
-        "fs": "0.0.1-security",
-        "path": "^0.12.7",
-        "request": "^2.88.2"
-    }
+  "name": "extaz-rpc",
+  "version": "1.2",
+  "description": "Client rpc qui permet de changer les images toutes les 3 secondes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Arizaki",
+  "license": "MIT",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "discord-rpc": "^3.2.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  }
 }
