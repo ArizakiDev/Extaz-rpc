@@ -106,10 +106,11 @@ const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 // Fonction pour mettre à jour le statut Discord avec les images et les boutons
 function updateDiscordStatus() {
   const randomImage = images[Math.floor(Math.random() * images.length)];
+  const randomState = state[Math.floor(Math.random() * state.length)];
 
   rpc.setActivity({
     details: details,
-    state: state,
+    state: randomState,
     largeImageKey: randomImage,
     largeImageText: largeImageText,
     buttons: buttons,

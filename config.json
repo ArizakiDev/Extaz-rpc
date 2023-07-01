@@ -3,10 +3,16 @@
   "images": [
     "nom_image_1",
     "nom_image_2",
-    "nom_image_3"
+    "nom_image_3",
+    "Vous pouvez ajouter autant d'image que vous le souhaitez, celle-ci se changera automatiquement toutes les 3 secondes"
+  ],
+
+  "state": [
+    "Votre_premier_state",
+    "votre_deuxième_state",
+    "Vous pouvez ajouter autant de state que vous le souhaitez, celui-ci se changera automatiquement toutes les 3 secondes"
   ],
   "details": "votre_details",
-  "state": "votre_state",
   "largeImageText": "votre_large_image_text",
   "buttons": [
     {
@@ -19,3 +25,5 @@
     }
   ]
 }
+
+
