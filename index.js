@@ -125,7 +125,7 @@ function updateDiscordStatus() {
 rpc.login({ clientId })
   .then(() => {
     console.log('\nConnecté à Discord avec succès.' + '\u2714');
-    setInterval(updateDiscordStatus, 3000);
+    setInterval(updateDiscordStatus, `${config.time}`);
   })
   .catch((error) => {
     console.error('\x1b[31m' +  'Erreur lors de la connexion à Discord :', error + '\x1b[0m');

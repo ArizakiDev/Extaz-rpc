@@ -23,7 +23,8 @@
       "label": "Bouton 2",
       "url": "https://example.com/bouton2"
     }
-  ]
+  ],
+  "time": "Temps_de_changement_millisecondes"
 }
 
 
