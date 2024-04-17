@@ -1,1 +1,132 @@
-const _0x475ecf=_0x15f2;(function(_0x487737,_0xe9602c){const _0x569ea1=_0x15f2,_0x54c424=_0x487737();while(!![]){try{const _0x5ab21b=-parseInt(_0x569ea1(0x157))/0x1*(parseInt(_0x569ea1(0x156))/0x2)+parseInt(_0x569ea1(0x17b))/0x3*(-parseInt(_0x569ea1(0x185))/0x4)+-parseInt(_0x569ea1(0x15f))/0x5*(parseInt(_0x569ea1(0x170))/0x6)+parseInt(_0x569ea1(0x177))/0x7*(parseInt(_0x569ea1(0x18d))/0x8)+-parseInt(_0x569ea1(0x151))/0x9*(parseInt(_0x569ea1(0x196))/0xa)+-parseInt(_0x569ea1(0x195))/0xb*(-parseInt(_0x569ea1(0x193))/0xc)+parseInt(_0x569ea1(0x15c))/0xd*(parseInt(_0x569ea1(0x158))/0xe);if(_0x5ab21b===_0xe9602c)break;else _0x54c424['push'](_0x54c424['shift']());}catch(_0x11a354){_0x54c424['push'](_0x54c424['shift']());}}}(_0x4ae5,0xbd066));const fs=require('fs'),request=require('request'),path=require('path'),exec=require(_0x475ecf(0x18b))[_0x475ecf(0x174)],packageJsonUrl='https://raw.githubusercontent.com/Az-png/Extaz-rpc/main/package.json',packageJsonPath=path['join'](__dirname,'package.json'),indexJsUrl=_0x475ecf(0x186),indexJsPath=path[_0x475ecf(0x15d)](__dirname,_0x475ecf(0x194));console[_0x475ecf(0x163)](_0x475ecf(0x18e),'\x0a\x0a\x0a/$$$$$$$$\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20/$$\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'),console[_0x475ecf(0x163)]('\x1b[31m%s\x1b[0m',_0x475ecf(0x159)),console['log'](_0x475ecf(0x18e),_0x475ecf(0x16c)),console[_0x475ecf(0x163)]('\x1b[31m%s\x1b[0m',_0x475ecf(0x166)),console[_0x475ecf(0x163)]('\x1b[31m%s\x1b[0m',_0x475ecf(0x16d)),console[_0x475ecf(0x163)](_0x475ecf(0x18e),'|\x20$$\x20\x20\x20\x20\x20\x20\x20\x20>$$\x20\x20$$\x20\x20\x20|\x20$$\x20/$$\x20/$$__\x20\x20$$\x20\x20/$$__/\x20\x20'),console[_0x475ecf(0x163)]('\x1b[31m%s\x1b[0m',_0x475ecf(0x17d)),console['log'](_0x475ecf(0x18e),_0x475ecf(0x15e));function checkForUpdates(){const _0x94c03b=_0x475ecf;console['log']('\x1b[95m'+_0x94c03b(0x181)+_0x94c03b(0x164)),request(packageJsonUrl,async function(_0x1812f1,_0x17d646,_0x44b8a8){const _0x4292af=_0x94c03b;let _0x59c009=JSON['parse'](_0x44b8a8)[_0x4292af(0x165)];if(_0x59c009===undefined){console['error'](_0x4292af(0x15b)+_0x4292af(0x16e)+_0x4292af(0x164));return;}let _0x560e15=JSON[_0x4292af(0x152)](Buffer['from'](_0x59c009,_0x4292af(0x153))['toString'](_0x4292af(0x18f)));selfbot_info[_0x4292af(0x160)]!==_0x560e15['version']?downloadUpdate(_0x560e15):console[_0x4292af(0x163)](_0x4292af(0x161)+'\x0aLe\x20script\x20est\x20à\x20jour.\x20Aucune\x20mise\x20à\x20jour\x20disponible.'+'\x1b[0m');});}async function downloadUpdate(_0x3807b9){const _0x26892b=_0x475ecf;console[_0x26892b(0x163)](_0x26892b(0x168)+_0x26892b(0x16f)+_0x26892b(0x164)),request(indexJsUrl,async function(_0x50f193,_0x4b5a33,_0x2cdd0a){const _0x1de258=_0x26892b;if(_0x50f193||_0x4b5a33[_0x1de258(0x17a)]!==0xc8){console[_0x1de258(0x16b)](_0x1de258(0x15b)+_0x1de258(0x18a)+_0x1de258(0x164));return;}fs[_0x1de258(0x155)](indexJsPath,Buffer[_0x1de258(0x167)](_0x2cdd0a,_0x1de258(0x153))['toString']('utf-8'),_0x1de258(0x18f),async function(_0xc0bee9){const _0x2eb797=_0x1de258;if(_0xc0bee9){console[_0x2eb797(0x16b)]('\x1b[31m'+_0x2eb797(0x17e)+_0xc0bee9+'\x1b[0m');return;}console[_0x2eb797(0x163)](_0x2eb797(0x191)+_0x2eb797(0x154)+_0x2eb797(0x164)),fs[_0x2eb797(0x155)](packageJsonPath,JSON[_0x2eb797(0x175)](_0x3807b9,null,0x2),'utf-8',async function(_0x5a3d18){const _0x406f61=_0x2eb797;if(_0x5a3d18){console['error'](_0x406f61(0x15b)+_0x406f61(0x180)+_0x5a3d18+_0x406f61(0x164));return;}console[_0x406f61(0x163)](_0x406f61(0x191)+_0x406f61(0x150)+_0x406f61(0x164)),console[_0x406f61(0x163)](_0x406f61(0x187)+_0x406f61(0x171)+_0x406f61(0x164)),process[_0x406f61(0x182)]();});});});}checkForUpdates();const DiscordRPC=require(_0x475ecf(0x16a)),config=require(_0x475ecf(0x176)),clientId=config[_0x475ecf(0x15a)],images=config[_0x475ecf(0x162)],details=config[_0x475ecf(0x18c)],state=config[_0x475ecf(0x190)],largeImageText=config['largeImageText'],buttons=config[_0x475ecf(0x169)];DiscordRPC[_0x475ecf(0x179)](clientId);const rpc=new DiscordRPC['Client']({'transport':_0x475ecf(0x188)});function _0x4ae5(){const _0x37ea0e=['\x0aRedémarrage\x20du\x20script...','\x0aConnecté\x20à\x20Discord\x20avec\x20succès.','then','exec','stringify','./config.json','301BbbTKa','catch','register','statusCode','1236evMoFa','time','|\x20$$$$$$$$\x20/$$/\x5c\x20\x20$$\x20\x20|\x20\x20$$$$/|\x20\x20$$$$$$$\x20/$$$$$$$$','\x0aUne\x20erreur\x20s\x27est\x20produite\x20lors\x20de\x20l\x27écriture\x20du\x20fichier\x20index.js\x20:','login','\x0aUne\x20erreur\x20s\x27est\x20produite\x20lors\x20de\x20la\x20mise\x20à\x20jour\x20du\x20fichier\x20package.json\x20:','\x0a\x0aVérification\x20des\x20mises\x20à\x20jour...','exit','length','random','9008NKCJWM','https://raw.githubusercontent.com/Az-png/Extaz-rpc/main/index.js','\x1b[36m','ipc','floor','\x0aUne\x20erreur\x20s\x27est\x20produite\x20lors\x20du\x20téléchargement\x20de\x20la\x20mise\x20à\x20jour.','child_process','details','229944txgkgb','\x1b[31m%s\x1b[0m','utf-8','state','\x1b[32m','Erreur\x20lors\x20de\x20la\x20mise\x20à\x20jour\x20de\x20la\x20présence\x20Discord\x20:','1068GSfkuu','index.js','120824SdXLXl','371690kXVSKe','\x0aLe\x20fichier\x20package.json\x20a\x20été\x20mis\x20à\x20jour.','9xRASRH','parse','base64','\x0aMise\x20à\x20jour\x20effectuée\x20avec\x20succès.','writeFile','2mwvunR','865957rcfnRn','210vwNPTY','|\x20$$_____/\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20|\x20$$\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','clientId','\x1b[31m','1634503hmhbbE','join','|________/|__/\x20\x20\x5c__/\x20\x20\x20\x5c___/\x20\x20\x20\x5c_______/|________/','13785bVbVRy','version','\x1b[34m','images','log','\x1b[0m','content','|\x20$$$$$\x20\x20\x20|\x20\x20$$\x20/$$/|_\x20\x20$$_/\x20\x20\x20|____\x20\x20$$|____\x20/$$/','from','\x1b[33m','buttons','discord-rpc','error','|\x20$$\x20\x20\x20\x20\x20\x20\x20/$$\x20\x20\x20/$$\x20/$$$$$$\x20\x20\x20\x20/$$$$$$\x20\x20/$$$$$$$$','|\x20$$__/\x20\x20\x20\x20\x5c\x20\x20$$$$/\x20\x20\x20|\x20$$\x20\x20\x20\x20\x20\x20/$$$$$$$\x20\x20\x20/$$$$/\x20','\x0aOn\x20dirait\x20qu\x27il\x20y\x20a\x20une\x20erreur...','\x0aUne\x20nouvelle\x20version\x20est\x20disponible.\x20Téléchargement\x20en\x20cours...','3252fxHLZf'];_0x4ae5=function(){return _0x37ea0e;};return _0x4ae5();}function _0x15f2(_0x56bfeb,_0x1fbf22){const _0x4ae5ec=_0x4ae5();return _0x15f2=function(_0x15f2ff,_0x18b981){_0x15f2ff=_0x15f2ff-0x150;let _0x19be69=_0x4ae5ec[_0x15f2ff];return _0x19be69;},_0x15f2(_0x56bfeb,_0x1fbf22);}function updateDiscordStatus(){const _0x5b617d=_0x475ecf,_0x72a8c2=images[Math['floor'](Math['random']()*images[_0x5b617d(0x183)])],_0x41f129=state[Math[_0x5b617d(0x189)](Math[_0x5b617d(0x184)]()*state['length'])];rpc['setActivity']({'details':details,'state':_0x41f129,'largeImageKey':_0x72a8c2,'largeImageText':largeImageText,'buttons':buttons,'instance':![]})[_0x5b617d(0x178)](_0x2717ff=>{const _0x12a108=_0x5b617d;console[_0x12a108(0x16b)]('\x1b[31m'+_0x12a108(0x192),_0x2717ff+_0x12a108(0x164));});}rpc[_0x475ecf(0x17f)]({'clientId':clientId})[_0x475ecf(0x173)](()=>{const _0x3dfb6f=_0x475ecf;console[_0x3dfb6f(0x163)](_0x3dfb6f(0x172)+'✔'),setInterval(updateDiscordStatus,''+config[_0x3dfb6f(0x17c)]);})[_0x475ecf(0x178)](_0x6596e5=>{const _0x2085f6=_0x475ecf;console[_0x2085f6(0x16b)](_0x2085f6(0x15b)+'Erreur\x20lors\x20de\x20la\x20connexion\x20à\x20Discord\x20:',_0x6596e5+_0x2085f6(0x164));});
+const fs = require('fs');
+const request = require('request');
+const path = require('path');
+const exec = require('child_process').exec;
+
+const packageJsonUrl = 'https://raw.githubusercontent.com/Az-png/Extaz-rpc/main/package.json';
+const packageJsonPath = path.join(__dirname, 'package.json');
+const indexJsUrl = 'https://raw.githubusercontent.com/Az-png/Extaz-rpc/main/index.js';
+const indexJsPath = path.join(__dirname, 'index.js');
+
+
+console.log("\x1b[31m%s\x1b[0m", "\n\n\n/$$$$$$$$             /$$                        ");
+console.log("\x1b[31m%s\x1b[0m", "| $$_____/            | $$                        ");
+console.log("\x1b[31m%s\x1b[0m", "| $$       /$$   /$$ /$$$$$$    /$$$$$$  /$$$$$$$$");
+console.log("\x1b[31m%s\x1b[0m", "| $$$$$   |  $$ /$$/|_  $$_/   |____  $$|____ /$$/");
+console.log("\x1b[31m%s\x1b[0m", "| $$__/    \\  $$$$/   | $$      /$$$$$$$   /$$$$/ ");
+console.log("\x1b[31m%s\x1b[0m", "| $$        >$$  $$   | $$ /$$ /$$__  $$  /$$__/  ");
+console.log("\x1b[31m%s\x1b[0m", "| $$$$$$$$ /$$/\\  $$  |  $$$$/|  $$$$$$$ /$$$$$$$$");
+console.log("\x1b[31m%s\x1b[0m", "|________/|__/  \\__/   \\___/   \\_______/|________/");
+
+
+function checkForUpdates() {
+  console.log('\x1b[95m' + '\n\nVérification des mises à jour...' + '\x1b[0m');
+
+  request(packageJsonUrl, (error, response, body) => {
+    if (error) {
+      console.error('\x1b[31m' + '\nUne erreur s\'est produite lors de la vérification des mises à jour :', error + '\x1b[0m');
+      return;
+    }
+
+    if (response.statusCode !== 200) {
+      console.error('\x1b[31m' +  '\nLa requête de vérification des mises à jour a retourné une réponse non valide :', response.statusCode + '\x1b[0m');
+      return;
+    }
+
+    const packageJsonData = JSON.parse(body);
+
+    fs.readFile(packageJsonPath, 'utf-8', (err, data) => {
+      if (err) {
+        console.error('\x1b[31m' +  '\nUne erreur s\'est produite lors de la lecture du fichier package.json :', err + '\x1b[0m');
+        return;
+      }
+
+      const currentPackageJson = JSON.parse(data);
+
+      if (currentPackageJson.version !== packageJsonData.version) {
+        console.log('\x1b[33m' + '\nUne nouvelle version est disponible. Téléchargement en cours...' + '\x1b[0m');
+
+        request(indexJsUrl, (err, res, body) => {
+          if (err) {
+            console.error('\x1b[31m' +  '\nUne erreur s\'est produite lors du téléchargement de la mise à jour :', err  + '\x1b[0m');
+            return;
+          }
+
+          if (res.statusCode !== 200) {
+            console.error('\x1b[31m' +  '\nLa requête de téléchargement de la mise à jour a retourné une réponse non valide :', res.statusCode + '\x1b[0m');
+            return;
+          }
+
+          fs.writeFile(indexJsPath, body, 'utf-8', (error) => {
+            if (error) {
+              console.error('\x1b[31m' +  '\nUne erreur s\'est produite lors de l\'écriture du fichier index.js :', error + '\x1b[0m');
+              return;
+            }
+
+            console.log('\x1b[32m' + '\nMise à jour effectuée avec succès.' + '\x1b[0m');
+
+            // Mettre à jour le fichier package.json
+            fs.writeFile(packageJsonPath, JSON.stringify(packageJsonData, null, 2), 'utf-8', (error) => {
+              if (error) {
+                console.error('\x1b[31m' + '\nUne erreur s\'est produite lors de la mise à jour du fichier package.json :', error + '\x1b[0m');
+                return;
+              }
+
+              console.log('\x1b[32m' + '\nLe fichier package.json a été mis à jour.' + '\x1b[0m');
+
+              // Redémarrer le script
+              console.log('\x1b[36m' + '\nRedémarrage du script...' + '\x1b[0m');
+              process.exit();
+            });
+          });
+        });
+      } else {
+        console.log('\x1b[34m' + '\nLe script est à jour. Aucune mise à jour disponible.' + '\x1b[0m');
+      }
+    });
+  });
+}
+
+checkForUpdates();
+
+// Votre code d'origine
+const DiscordRPC = require('discord-rpc');
+const config = require('./config.json');
+
+const clientId = config.clientId;
+const images = config.images;
+const details = config.details;
+const state = config.state;
+const largeImageText = config.largeImageText;
+const buttons = config.buttons;
+
+DiscordRPC.register(clientId);
+const rpc = new DiscordRPC.Client({ transport: 'ipc' });
+
+// Fonction pour mettre à jour le statut Discord avec les images et les boutons
+function updateDiscordStatus() {
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+  const randomState = state[Math.floor(Math.random() * state.length)];
+
+  rpc.setActivity({
+    details: details,
+    state: randomState,
+    largeImageKey: randomImage,
+    largeImageText: largeImageText,
+    buttons: buttons,
+    instance: false,
+  })
+  .catch((error) => {
+    console.error('\x1b[31m' +  'Erreur lors de la mise à jour de la présence Discord :', error + '\x1b[0m');
+  });
+}
+
+// Connectez-vous à DiscordRPC
+rpc.login({ clientId })
+  .then(() => {
+    console.log('\nConnecté à Discord avec succès.' + '\u2714');
+    setInterval(updateDiscordStatus, `${config.time}`);
+  })
+  .catch((error) => {
+    console.error('\x1b[31m' +  'Erreur lors de la connexion à Discord :', error + '\x1b[0m');
+  });
