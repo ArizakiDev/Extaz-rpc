@@ -101,14 +101,14 @@ const largeImageText = config.largeImageText;
 const buttons = config.buttons;
 
 DiscordRPC.register(clientId);
-const rpc = new DiscordRPC.Client({ transport: 'ipc' });
+const extaz = new DiscordRPC.Client({ transport: 'ipc' });
 
 // Fonction pour mettre à jour le statut Discord avec les images et les boutons
 function updateDiscordStatus() {
   const randomImage = images[Math.floor(Math.random() * images.length)];
   const randomState = state[Math.floor(Math.random() * state.length)];
 
-  rpc.setActivity({
+  extaz.setActivity({
     details: details,
     state: randomState,
     largeImageKey: randomImage,
@@ -122,7 +122,7 @@ function updateDiscordStatus() {
 }
 
 // Connectez-vous à DiscordRPC
-rpc.login({ clientId })
+extaz.login({ clientId })
   .then(() => {
     console.log('\nConnecté à Discord avec succès.' + '\u2714');
     setInterval(updateDiscordStatus, `${config.time}`);
