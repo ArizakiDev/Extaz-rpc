@@ -1,6 +1,6 @@
 # Extaz-rpc
 ## Qu'est-ce donc Extaz rpc ?
-- Extaz rpc à été créé par Arizaki. Celui-ci permet de changer l'image ainsi que le "state" (description) toutes les 3 secondes.
+- Extaz rpc à été créé par Arizaki. Celui-ci permet de changer l'image ainsi que le "state" (description) avec le temps (configurable en millisecondes).
 
 ## Versions:
 
